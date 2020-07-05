@@ -2,16 +2,15 @@
 #  http://jenkins-ci.org/
 #  https://wiki.jenkins-ci.org/display/JENKINS/Administering+Jenkins
 
-#ignore all JENKINS_HOME except jobs directory, root xml config, and .gitignore file
+# ignore all JENKINS_HOME except jobs directory, and root xml config
 jenkins_home/*
-!./jenkins_home/jobs
-#!./jenkins_home/.gitignore
+!jenkins_home/jobs
 !./jenkins_home/*.xml
 
 #ignore all files in jobs subdirectories except for folders
 #note: git doesn't track folders, only file content
-./jenkins_home/jobs/**
-!./jenkins_home/jobs/**/
+jenkins_home/jobs/**
+!jenkins_home/jobs/**/
 
 #uncomment the following line to save next build numbers with config
 #!jobs/**/nextBuildNumber
