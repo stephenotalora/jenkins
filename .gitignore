@@ -5,7 +5,7 @@
 # ignore all JENKINS_HOME except jobs directory, and root xml config
 jenkins_home/*
 !jenkins_home/jobs
-!./jenkins_home/*.xml
+!jenkins_home/*.xml
 
 #ignore all files in jobs subdirectories except for folders
 #note: git doesn't track folders, only file content
@@ -21,4 +21,7 @@ jenkins_home/jobs/**
 #don't track workspaces (when users build on the master)
 jenkins_home/jobs/**/*workspace
 
-#as a result only settings and job config.xml files in JENKINS_HOME will be tracked by git
+# as a result only settings and job config.xml files in JENKINS_HOME will be tracked by git
+
+# do not include private/public keys
+centos/remote-key* 
