@@ -7,6 +7,9 @@ jenkins_home/*
 !jenkins_home/jobs
 !jenkins_home/*.xml
 
+# exclude jenkins credentials
+jenkins_home/credentials.*
+
 #ignore all files in jobs subdirectories except for folders
 #note: git doesn't track folders, only file content
 jenkins_home/jobs/**
